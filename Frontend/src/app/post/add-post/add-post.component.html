@@ -1,0 +1,34 @@
+<div class="notification"></div>
+<div class="container">
+  <form [formGroup]="post" (ngSubmit)="onSubmit()" class="addPostForm">
+    <h2>New Post</h2>
+    <label>Title</label>
+    <input
+      placeholder="title"
+      formControlName="title"
+      type="text"
+      maxlength="50"
+    />
+    <label>Description</label>
+    <textarea
+      placeholder="description"
+      formControlName="description"
+      ng-model="description"
+      ng-trim="false"
+      maxlength="400"
+
+    ></textarea>
+    <!-- <span>{{ description.length }} characters remaining </span> -->
+    <input
+      placeholder="image"
+      type="file"
+      id="image"
+      formControlName="imageUrl"
+      (change)="fileInput($event.target.files)"
+    />
+    <img [src]="previewImg" class="previewImg" />
+    <button type="submit">Upload Post</button>
+  </form>
+</div>
+
+<!-- Save Picture (EXTRA) with PHP -->

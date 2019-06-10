@@ -1,0 +1,27 @@
+<div class="notification"></div>
+<div class="container">
+  <form [formGroup]="user" (ngSubmit)="onSubmit()" class="registerForm">
+    <h2>Register</h2>
+    <input
+      id="regUsername"
+      placeholder="full name"
+      formControlName="fullName"
+    />
+    <input id="regEmail" placeholder="email" formControlName="email" />
+    <span formGroupName="passwordGroup">
+      <input
+        id="regPass"
+        type="password"
+        placeholder="password"
+        formControlName="password"
+      />
+      <input
+        id="regConfPass"
+        type="password"
+        placeholder="confirm password"
+        formControlName="confirmPassword"
+      />
+    </span>
+    <button type="submit">Register</button>
+  </form>
+</div>

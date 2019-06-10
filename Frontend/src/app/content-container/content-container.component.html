@@ -1,0 +1,8 @@
+<div class="container">
+  <app-post
+    *ngFor="let localPost of posts$ | async"
+    [post]="localPost" data-cy="postItem"
+  ></app-post>
+
+  <p>You have seen all posts, thank you for using Quintstagram</p>
+</div>

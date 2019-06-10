@@ -1,0 +1,46 @@
+@import "../../vars"
+
+.container
+    text-align: center
+    margin: 40px auto 0 auto
+    font-family: sans-serif
+    border: 1px $black solid
+    border-radius: 3px
+    width: 80%
+.pictures
+    margin: 50px auto
+    display: flex
+    justify-content: space-around
+    
+    img
+        width: 25%
+        object-fit: contain
+
+.redirects
+    margin: 0 auto
+    display: flex
+    justify-content: space-around
+    
+    a
+        text-decoration: none
+        color: $white
+        font-weight: bold
+        width: 25%
+        margin: 10px
+        padding: 10px
+        div
+           
+            
+            padding: 10px
+            border-radius: 5px
+            transition: transform 0.5s ease-out
+        div:hover
+            transform: scale(1.05)
+
+
+.join
+    background: $lightBlue
+.notLogged
+    background: #e50000
+.member
+    background: #20B2AA

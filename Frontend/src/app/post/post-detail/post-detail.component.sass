@@ -1,0 +1,89 @@
+@import "../../../vars"
+
+    
+.container
+    display: flex
+    justify-content: center
+    margin: 40px 0 120px 0
+    font-family: sans-serif
+ul
+    text-decoration: none
+    list-style: none
+    padding: 0
+
+.post
+    width: 500px 
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    .postImage
+        // padding: 10px
+        
+        border-top-left-radius: 3px
+        border-top-right-radius: 3px
+    .postText
+        h2
+            margin: 10px 0 0 5px
+        h5
+            margin: 5px 0 5px 15px
+            width: 450px
+            white-space: normal
+    img
+        display: block
+        margin: 0 auto
+        width: 100%
+.postIcons
+    display: flex
+    justify-content: space-between
+    text-align: center
+    p
+        margin: 5px 5px 0 0
+.likeCommentShare
+    margin: 0 0 0 10px
+    li
+        display: inline-block
+        color: #000000
+        padding: 8px
+.postedComments
+    margin: 0 0 10px 0
+    ul
+        margin: 0 0 3px 0
+        padding: 3px 0 3px 10px
+    ul:nth-child(odd)
+        background: #f6f6f6
+.comments
+    border-top: 1px solid #212021
+.newComment
+    width: 100%
+    .commentText
+        width: 390px
+        height: 40px
+        padding-left: 10px
+        color: $lightRichBlack
+        background: #f6f6f6
+        border: none
+        border-top: 1px solid $black
+    .commentText:focus
+        outline: thin
+
+    .sendComment
+        width: 100px
+        height: 43px
+        color: $lightRichBlack
+        background: #f6f6f6
+        border: none
+        border-top: 1px solid $black
+        font-weight: bold
+    .sendComment:focus
+        outline: thin
+.notLoggedIn
+    width: 500px !important
+    height: 40px
+    text-align: center
+    border-top: 1px solid $black
+    color: $lightRichBlack
+    background: #f6f6f6
+    .loginToComment
+        margin: 10px auto
+        a
+            text-decoration: none
+            color: $lightRichBlack 

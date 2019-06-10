@@ -1,0 +1,41 @@
+@import "../../../vars"
+
+.container
+    display: flex
+    justify-content: center
+    margin: 20px 0
+    font-family: sans-serif
+.loginForm
+    width: 500px 
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    input, button
+        display: block
+        margin: 10px auto 0 auto
+    h2, h4, h5
+        text-align: center
+
+
+/* Notifaction SASS */
+
+.notification
+    z-index: 1
+    position: relative
+    display: block
+    width: 100%
+    margin-top: 0
+    color: #fff
+    font-family: OpenSans Regular,sans-serif
+    font-size: 1rem
+    font-weight: 400
+    text-align: center
+    line-height: 2rem
+    -webkit-transition: all 1s ease-in-out
+    transition: all 1s ease-in-out
+    -webkit-box-shadow: 0 8px -6px #222
+    box-shadow: 0 8px -6px #222
+    visibility: hidden
+.notification.notification-error
+    display: block!important
+    visibility: visible
+    background: #c0392b

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="post">
+    <div class="postImage">
+      <img src="assets/images/{{ post.imgUrl }}" class="image" />
+    </div>
+    <div class="postIcons">
+      <ul class="likeCommentShare">
+        <a (click)="likePost()">
+          <li class="likeIcon">
+            <i class="far fa-heart fa-2x"></i>
+          </li>
+        </a>
+        <a (click)="deletePost()" *ngIf="isCreator">
+          <li>
+            <i class="fas fa-trash fa-2x"></i>
+          </li>
+        </a>
+      </ul>
+      <p>
+        Added by <strong>{{ userName }}</strong> on
+        {{ post.created | date: "dd/MM/yyyy" }}
+      </p>
+    </div>
+    <div class="postText">
+      <h2>{{ post.title }}</h2>
+      <h5>{{ post.description }}</h5>
+      <!-- Start Comment section -->
+      <div class="comments">
+        <div class="postedComments">
+          <ul *ngFor="let comment of post.comments">
+            <li>
+              {{ comment.message }}
+            </li>
+          </ul>
+        </div>
+        <form
+          [formGroup]="newComment"
+          (ngSubmit)="onSubmit()"
+          class="newComment"
+          *ngIf="isAuthenticated()"
+        >
+          <input
+            placeholder="message"
+            type="text"
+            class="commentText"
+            formControlName="message"
+            maxlength="150"
+            data-cy="messageField"
+          />
+          <button type="submit" class="sendComment" data-cy="messageSend">Verzenden</button>
+        </form>
+        <div class="notLoggedIn" *ngIf="!isAuthenticated()">
+          <p class="loginToComment"><a href="/login">Log into comment</a></p>
+        </div>
+      </div>
+      <!-- Einde Comment section -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+@import "../../../vars"
+
+.container
+    display: flex
+    justify-content: center
+    margin: 20px 0
+    font-family: sans-serif
+
+.registerForm
+    width: 500px 
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    h2
+        text-align: center
+    button
+        width: 400px
+        background: $lightRichBlack
+        color: $white
+        font-size: 24px
+        align-self: center
+        padding: 5px
+        margin-left: 50px
+        margin-bottom: 30px
+        border: none
+        transition: background 0.5s ease-out, color 0.25s ease-out
+
+    button:hover
+        color: $lightRichBlack
+        background: $white
+    input
+        padding-left: 8px
+        width: 150px
+        border: 1px solid $black
+        margin-bottom: 25px
+
+#regUsername, #regPass
+    margin-left: 75px
+
+#regEmail, #regConfPass
+    margin-left: 25px
+        
+/* Notifaction SASS */
+
+.notification
+    z-index: 1
+    position: relative
+    display: block
+    width: 100%
+    margin-top: 0
+    color: #fff
+    font-family: OpenSans Regular,sans-serif
+    font-size: 1rem
+    font-weight: 400
+    text-align: center
+    line-height: 2rem
+    -webkit-transition: all 1s ease-in-out
+    transition: all 1s ease-in-out
+    -webkit-box-shadow: 0 8px -6px #222
+    box-shadow: 0 8px -6px #222
+    visibility: hidden
+.notification.notification-error
+    display: block!important
+    visibility: visible
+    background: #c0392b

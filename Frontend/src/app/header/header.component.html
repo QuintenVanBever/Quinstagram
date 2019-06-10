@@ -1,0 +1,29 @@
+<header>
+  <div class="logo">
+    <a href="/posts"><img src="../../assets/images/logo/logo.png"/></a>
+    <h4 *ngIf="loggedIn">Hey, {{ username }}</h4>
+  </div>
+
+  <div class="navigation">
+      <div class="newPostButton">
+          <button class="postButton" [routerLink]="['/posts/']">
+            All Posts
+          </button>
+        </div>
+    <div class="newPostButton" *ngIf="isAuthenticated()">
+      <button class="postButton" [routerLink]="['/posts/upload']">
+        New post
+      </button>
+    </div>
+    <div class="newPostButton" *ngIf="!isAuthenticated()">
+      <button class="postButton" [routerLink]="['/']">Home</button>
+    </div>
+
+    <div class="newPostButton" *ngIf="!isAuthenticated()">
+      <button class="postButton" [routerLink]="['login']">Login</button>
+    </div>
+    <div class="newPostButton" *ngIf="isAuthenticated()">
+      <button class="postButton" (click)="logout()" [routerLink]="['/']">Logout</button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+<div class="notification"></div>
+<div class="container">
+  <form [formGroup]="user" (ngSubmit)="onSubmit()" class="loginForm">
+    <h2>Welcome back!</h2>
+    <h4>Please log in with you email and password</h4>
+    <input placeholder="email" formControlName="username" data-cy="login-email"/>
+    <input type="password" placeholder="password" formControlName="password" data-cy="login-password"/>
+    <button type="submit" data-cy="login-button">Login</button>
+    <h5>Not a member? <a [routerLink]="['/register']">Register</a> today!</h5>
+  </form>
+</div>
